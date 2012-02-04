@@ -1,0 +1,14 @@
+#!/bin/sh
+
+#set -x
+
+shred_files="$HOME/.bash_history $HOME/.history"
+
+for file in $shred_files
+do
+	if [ -e $file ]
+	then
+		echo shredding $file
+		shred -u $file 
+	fi
+done
