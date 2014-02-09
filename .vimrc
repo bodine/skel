@@ -22,10 +22,14 @@ set noswapfile
 
 " The default autoindent behavior is damaged, especially when editing 
 " indentation-sensitive files like Makefiles and python programs. Per-
-" file-type indentation is more flexible.
+" file-type indentation is more flexible. Put per-file-type rules in
+" .vim/syntax. Here are some sensible defaults though.
+" 
 set noautoindent
+set nosmartindent
 filetype plugin on
 filetype indent on
+set background=dark
 
 " Good features
 set backspace="2"
